@@ -1,0 +1,37 @@
+#cloud-config
+autoinstall:
+    version: 1
+    identity:
+        realname: 'sergon'
+        hostname: ThinkPad-T460
+        username: admin
+        password: '$y$j9T$0NV0A2HBKzCEiQHKivQZc.$1FPkT6.x4LS4dKydbn1qKQj5QXwCC8P9U84B.CabP8C'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"   
+    packages:
+        - libreoffice
+        - gimp
+        - git
+        - wget
+        - pip
+        - python3
+        - ncdu
+        - tmux
+        - curl
+        - net-tools
+        - build-essential
+        - docker
+        - starship
+
+    snaps:
+        - name: spotify
+          channel: stable
+          classic: false
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
